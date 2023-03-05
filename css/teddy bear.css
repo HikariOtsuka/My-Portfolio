@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+html {
+  font-size: 150%;
+}
+body {
+  height: 100%;
+  color: #000405;
+  font-family: '游明朝',Yu Mincho,sans-serif;
+  background: #00849c;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+.site-title {
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+.sec-title {
+  font-size: 2.0rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.third-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/*-------------------------------------------
+背景
+-------------------------------------------*/
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:-2;/*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color:#00849c;/*背景色*/
+}
+#wrapper{
+  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: -1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width:100%;
+  height: 100%;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header{
+  display: flex;
+}
+.nav_pc{
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  height: 270px;
+  margin: 0 12px;
+  padding: 0 4%;
+}
+.nav_pc ul {
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 0;
+  margin-right: -100px;
+  width: 100%;
+}
+.nav_pc li {
+  font-size: 1.4rem;
+  margin-left: 30px;
+}
+.nav_pc a {
+  color: #000405;
+}
+.nav_pc li a:hover {
+  opacity: 0.7;
+}
+.nav_pc ul li img.icon {
+  width: 20px;
+}
+.nav_sp {
+  display: none;
+}
+
+/*-------------------------------------------
+Explanation
+-------------------------------------------*/
+#explanation ul {
+  margin-bottom: 30px;
+}
+#explanation a {
+    color: #fafeff;
+    font-size: 80%;
+}
+
+/*-------------------------------------------
+Modeling
+-------------------------------------------*/
+#modeling ul {
+  margin-bottom: 30px;
+}
+#modeling li {
+  width: 70%;
+  margin-left: 20px;
+}
+#modeling p {
+  margin-top: 30px;
+  text-align:justify;
+  margin-bottom: 30px;
+}
+.Design picture {
+  display: flex;
+  justify-content: space-between;
+}
+.Desing picture img{
+  max-width: 400px;
+  text-align: center;
+}
+.Model1 img {
+  max-width: 825px;
+  text-align: center;
+}
+.Model2 picture {
+  display: flex;
+  justify-content: space-between;
+}
+.Model2 img {
+  display: flex;
+  max-width: 150px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+Animation
+-------------------------------------------*/
+#animation ul {
+  margin-bottom: 30px;
+}
+#animation video {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+#animation li {
+  margin-bottom: 23px;
+  font-size: 110%;
+}
+
+/*-------------------------------------------
+Top
+-------------------------------------------*/
+#toTop a {
+  position: fixed;  /* 位置を固定。 */ 
+  right: 30px;
+  bottom: 35px;  
+  cursor: pointer;
+  color: #fafeff;
+  font-size: 80%;
+}
+#toTop:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  background-color: #fafeff;
+  color: #000405;
+  font-size: 0.75rem;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 120%;
+  }
+  .wrapper {
+    margin-bottom: 70px;
+  }
+  .site-title {
+    margin-top: 20px;
+  }
+  .sec-title {
+    margin-bottom: 40px;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  .nav_pc{
+    display: none;
+  }
+  .nav_sp {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    padding: 0 4%;
+  }
+  /*MENU*/
+  .openbtn_sp{
+    display:block;
+    position: relative;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height:70px;
+    position: fixed;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 12;
+  }
+  .openbtn_sp i {
+    display: inline-block;
+    transition: transform .5s, opacity .5s;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    height: 2px;
+    width: 60%;
+    background-color: #fafeff;
+    border-radius: 5px;
+  }
+  .openbtn_sp i:nth-child(1) {
+    top: 13px;
+  }
+  .openbtn_sp i:nth-child(2) {
+    top:21px;
+  }
+  .openbtn_sp i:nth-child(3) {
+    top:29px;
+  }
+  .openbtn_sp i:nth-child(3)::after {
+    content:"menu";
+    position: absolute;
+    top:5px;
+    left:-6px;
+    color: #fafeff;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .openbtn_sp.show i:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+  }
+  .openbtn_sp.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .openbtn_sp.show i:nth-child(3) {
+    transform: translateY(-11px) rotate(45deg);
+  }
+  .openbtn_sp.show i:nth-child(3)::after {
+    content:"close";
+      transform: translateY(0) rotate(-45deg);
+    top:10px;
+    left:10px;
+  }
+  /*メニュリストクリック前*/
+  .nav{
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .nav.show {
+    opacity: 0.85;
+    visibility: visible;
+  }
+  .navigation_sp{
+    position: fixed;
+    padding: 64px 0; 
+    margin-top:-110px;
+    flex-direction: column;
+    background-color: #000405;
+    z-index: 15;
+    right: 0%;
+    width: 75%;
+  }
+  .navigation_sp li{
+    width: 100%;
+    height: 15vh;
+    font-size: 130%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-bottom: -80px;
+  }
+  .navigation_sp li a{
+    color: #fafeff;
+  }
+
+  /*-------------------------------------------
+  Modeling
+  -------------------------------------------*/
+  #modeling ul {
+    margin-bottom: 30px;
+  }
+  #modeling li {
+    width: 70%;
+    margin-left: 20px;
+  }
+  #modeling p {
+    margin-top: 30px;
+    text-align:justify;
+  }
+  .Design picture {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Desing picture img{
+    width: 100%;
+    text-align: center;
+  }
+  .Model1 img {
+    width: 135%;
+    text-align: center;
+  }
+  .Model2 picture {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Model2 img {
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+}
