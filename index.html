@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hikari Otsuka-Portfolio</title>
+    <meta name="description" content="大塚光莉のポ－トフォリオです。新しいことに挑戦し続け、ユーザーに喜んでもらえるような作品を制作したいと思っております。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--外部ファイル読み込み-->
+    <link rel="shortcut icon" href="img/star.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!--ここからBackGround-->
+    <div id="particles-js"></div>
+    <div id="wrapper">
+      <a href="https://vincentgarreau.com/particles.js/" target="_blank"></a>
+    </div>
+    <!--/wrapper-->
+    <!--ここまでBackGround-->
+    
+
+    <!--ここからheader-->
+    <header id="header">
+      <nav class="nav_pc">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="My Portfolio(サイト名)"></a></h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#works">Works</a></li>
+        </ul>
+      </nav>
+      <nav class="nav_sp">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="My Portfolio(サイト名)"></a></h1>
+          <span class="openbtn_sp">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>      
+        <nav class="nav">
+          <ul class="navigation_sp">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#works">Works</a></li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+    <!--ここまでheader-->
+
+    <!--ここからMain-->
+    <main>
+      <div id="mainvisual">
+        <picture>
+          <source media="(max-width: 600px)" srcset="img/fantasy.jpg">
+          <img src="img/fantasy.jpg" alt="メイン">
+        </picture>
+      </div>
+      <!--ここからAbout-->
+      <section id="about" class="wrapper">
+        <h2 class="sec-title">About</h2>
+        <ul>
+          <li>Hikari Otsuka(大塚 光莉)</li>
+          <li>生年月日: 2001年10月25日</li>
+          <li>出身/在住地: 千葉県</li>
+          <li>学校: 東邦大学 情報科学科 メディア生命科学コース</li>
+          <li>mail: 5520025o@st.toho-u.jp</li>
+          <li>tel: 080-9400-1630</li>
+        </ul>
+        <p>
+          アニメ、ゲーム、VR・ARなどのCG作品が好きで、作品の様々な表現や演出に感動し、「ユーザーに喜んでもらえるものを作りたい 」「新しいことに挑戦したい」という強い好奇心の性格から、 CG制作を始めました。
+        </p>
+      </section>
+      <!--ここまでAbout-->
+
+      <!--ここからSkill-->
+      <section id="skill" class="wrapper">
+        <h2 class="sec-title">Skill</h2>
+          <h3 class="third-title">●プログラミング言語</h3>
+          <ul>
+            <li>Java(約3年)</li>
+            <li>JavaScript(約1年)</li>
+            <li>Python(約1年)</li>
+            <li>HTML(約半年)</li>
+            <li>css(約半年)</li>
+            <li>Java3D(約3ヶ月)</li>
+            <li>C#(触れた経験あり)</li>
+          </ul>
+          <h3 class="third-title">●ソフト</h3>
+          <ul>
+            <li>Maya(チーム作品制作)</li>
+            <li>Unreal Engin(チーム作品制作・自主学習)</li>
+            <li>Unity(少々触れた経験あり)</li>
+          </ul>
+      </section>
+      <!--ここまでSkill-->
+
+      <!--ここからWorks-->
+      <section id="works" class="wrapper">
+        <h2 class="sec-title">Works</h2>
+        <ul>
+          <li><a href="candy.html"><img src="img/Candy.jpg" alt="3人称プラットフォームステルスゲーム「Candy」"></a>ゲーム「Candy」</li>
+          <li><a href="buddy.html"><img src="img/Buddy.jpg" alt="CGアニメーション「Buddy」"></a>アニメーション「Buddy」</li>
+          <li><a href="teddy bear.html"><img src="img/teddy bear.jpg" alt="CGアニメーション「teddy bear」"></a>アニメーション<p></p>「teddy bear」</li>
+        </ul>
+      </section>
+      <!--ここまでWorks-->
+    </main>
+    <!--ここまでMain-->
+
+    <!--ここからtoTop-->
+    <section id="toTop">
+      <a href="index.html">
+        <img src="img/top.png" width="30px" alt="トップへ戻るボタン">トップへ戻る
+      </a>
+    </section>
+    <!--ここまでtoTop-->
+  
+    <!--ここからfooter-->
+    <section id="footer">
+      <p>&copy;Hikari Otsuka.</p>
+    </section>
+    <!--ここまでfooter-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/style.js"></script>
+
+    <script>
+    $('.openbtn_sp').on('click', function () {
+      $('.openbtn_sp, .nav').toggleClass('show');
+    });
+    </script>
+
+
+  </body>
+
+</html>
